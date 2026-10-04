@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Greer | Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-dark">
+
+    <header class="text-center text-bg-secondary p-4">
+        <h1 class="fw-bold">Henry Greer</h1>
+        <h2 class="fw-bold">Contact Us</h2>
+    </header>
+
+    <main class="container">
+
+        <div class="card bg-secondary m-4">
+            <div class="card-body p-5">
+                <h2 class="fw-bold">Week 4</h2>
+                <p class="text-white fs-5">
+                    For Week 4 of the module I have created a contact form for users to get in touch.
+                    This will collect the user's name, email address, a random colllection of other info an a message.
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-secondary m-4">
+            <div class="card-body p-5">
+                <h2 class="fw-bold">Contact Us</h2>
+                 <form id="contact_form" action="https://formspree.io/f/xbgldjgo" method ="POST">
+                    <p>
+                        If you would like to get in touch with me, please use the form below.
+                        I will do my best to respond to your message as soon as possible.
+                    </p>
+
+                    <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text"
+                                id="name" 
+                                name="name" 
+                                class ="form-control"
+                                placeholder="John Smith">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" 
+                                id="email" 
+                                name="email"  
+                                placeholder="example@google.co.uk" 
+                                class="form-control">
+                        <p id="email-error" class="text-light d-none">
+                            Please enter a valid email address.
+                        </p>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="desert_topping" class="form-label">Favourite Topping:</label><br>
+
+                        <select id="desert_topping" 
+                                name="Desert Topping" 
+                                class="form-select">
+
+                            <option value="custard">Custard</option>
+                            <option value="ice_cream">Ice Cream</option>
+                            <option value="cream">Cream</option>
+
+                        </select>
+                    </div>
+
+                        
+
+                    <div class="mb-3">
+                        <label class="form-label">Preferred Holiday Location:</label><br>
+                        
+                        <div class="form-check">                        
+                            <input type="radio"
+                                id="stay_home" 
+                                name="holiday" 
+                                value="home"
+                                class="form-check-input">
+                            <label for="stay_home" class="form-check-label">Stay Home</label>
+                        </div>
+                        <div class="form-check">  
+                            <label for="home_nations" class="form-check-label">Home Nations</label>
+                                <input type="radio" 
+                                    id="home_nations" 
+                                    name="holiday" 
+                                    value="home_nations"
+                                    class="form-check-input">
+                        </div>
+                        
+                        <div class="form-check">                              
+                            <input type="radio" 
+                                    id="abroad" 
+                                    name="holiday" 
+                                    value="abroad"
+                                    class="form-check-input">
+                            <label for="abroad" class="form-check-label">Abroad</label>
+                        </div>                      
+
+                    </div>
+
+                    <div class="form-check mb-3">                        
+                        <input type="checkbox" 
+                            id="terms" 
+                            name="terms"
+                            class="form-check-input">
+                        <label for="terms" class="form-check-label"> I agree to the terms</label>
+                    </div>
+
+                    <div>
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea id="message"
+                            name="message" rows="4"
+                            placeholder="Your message here..."
+                            maxlength="250"
+                            class="form-control"></textarea>
+                        <p class="text-end text-muted small">
+                            <span id="char-length">0</span> of 250 characters used.
+                        </p>
+
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-outline-dark">Submit</button>
+                        <button type="reset" class="btn btn-outline-dark">Clear</button>
+                    </div>
+                 </form>            
+            </div>
+            <div class="m-3">
+                <p id="thank-you-message" class="d-none">
+                    Thank you for your message. I will not get back to you.
+                </p>
+            </div>
+        </div>
+
+        <p>
+            <a href="index.html" class="btn btn-outline-danger">Back to Portfolio</a>
+        </p>
+
+    </main>
+
+    <footer class ="text-center text-bg-secondary p-4">
+        <p>
+            Henry Greer | Web Development | Sheffield Hallam University
+        </p>
+    </footer>
+
+
+
+</body>
+</html>
